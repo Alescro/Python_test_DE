@@ -1,6 +1,6 @@
 ## Python_test_DE
 
-This project contributes to create a nested JSON file refering to the dependencies of each drugs and their mentioning in articles from different journals according to the following rules:
+This project contributes to create a nested JSON file demonstrating the dependencies of each drugs and their mentioning in articles from different journals according to the following rules:
 * drug is considered as mentioned in PubMed article or in clinical test if it's mentioned in publication title.
 * drug is considered as mentioned bu journal if it is mentioned in publication issued by this journal.
 
