@@ -1,9 +1,33 @@
 ## Python_test_DE
 
+My project creates a nested JSON file refering to the dependencies of each drugs and their mentioning in articles according to the following rules:
+* drug is considered as mentioned in PubMed article or in clinical test if it's mentioned in publication title.
+* drug is considered as mentioned bu journal if it is mentioned in publication issued by this journal.
+
+All input files are located in ```resources/inputs``` folder.
+They are: 
+ - clinical_trials.csv
+ - drugs.csv
+ - pubmed.csv
+ - pubmed.json
+
+There is also an ad-hoc feature to help us find the journal which mentions the most of distinct drugs
+
+## How to set up the environment : 
+
+On PyCharm:
+Configure Python Interpreter > Add interpreter > Choose an already existing interpreter or create a new one.
+
+* Simply Run DrugsETL.py for the Extract-Transform-Load part of the pipeline, writing a Nested JSON output in ```resources/outputs``` folder.
+* Simply Run AdhocTreatment.py for the specific data treatment showing the top journals mentioning the most distinct drugs in their articles.
+
+A job scheduler like Airflow would be able to run the code in the 'utils' folder with python utils (helpers) that could be launched from the 'main' folder.
 
 
-``` README.md```
 
+
+##
+## Questions (in French):
 
 
 #### 1. Quels sont les éléments à considérer pour faire évoluer votre code afin qu’il puisse gérer de grosses volumétries de données (fichiers de plusieurs To ou millions de fichiers par exemple) ? ###
