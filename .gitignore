@@ -1,0 +1,6 @@
+documentation/test_python_de.pdf
+venv
+.idea
+.DS_Store
+***/*.pyc
+**/*.pyc
