@@ -21,7 +21,7 @@ Configure Python Interpreter > Add interpreter > Choose an already existing inte
 * Simply Run DrugsETL.py for the Extract-Transform-Load part of the pipeline, writing a Nested JSON output in ```resources/outputs``` folder.
 * Simply Run AdhocTreatment.py for the specific data treatment showing the top journals mentioning the most distinct drugs in their articles.
 
-A job scheduler like Airflow would be able to run the code in the 'utils' folder with python utils (helpers) that could be launched from the 'main' folder.
+A job scheduler like Airflow would be able to run the code in the 'utils' folder with python helpers that could be launched from the 'etl' folder.
 
 
 
