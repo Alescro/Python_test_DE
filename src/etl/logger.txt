@@ -1,0 +1,5 @@
+DEBUG:__main__:Files have been loaded into 2 dataframes : journals_df and drugs_df
+DEBUG:__main__:A new dataframe has been created. 
+Drugs_mentioned_df shows the different drugs and their related mentions in trials and publications from journals
+INFO:__main__:Data ETL completed. 
+Please check the output here : resources\outputs\JSON_drugs_publications.json
