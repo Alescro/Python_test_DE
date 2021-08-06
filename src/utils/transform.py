@@ -1,4 +1,7 @@
+
+
 from utils.extract import *
+
 
 
 def get_list_drugs(drugs):
@@ -13,13 +16,22 @@ def find_drugs_mentioned(journals, drugs):
         - drug is considered as mentioned bu journal if it is mentioned in publication issued by this journal.
 
         In output we create a nested json file with different hierarchical levels, multi indexed columns like :
-         {"drug":"BETAMETHASONE" :
+         {
+            "drug":"ATROPINE",
+            "atccode":"A03BA",
+            "publications":[
             {
                 {'journal': 'Journal of emergency nursing',
                 'date': '2020-01-01T00:00:00.000Z',
                 'title': 'Use of Diphenhydramine as an Adjunctive Sedative for Colonoscopy in Patients Chronically on Opioids',
                 'id': 'NCT01967433'
             }
+            ]
+        },
+
+        {
+            "drug":...
+
     """
 
     list_drugs = get_list_drugs(drugs)
@@ -53,8 +65,8 @@ def write_nested_json(df):
                                                          .to_dict('records')) \
         .reset_index() \
         .rename(columns={0: 'publications'}) \
-        .to_json('JSON_drugs_publications.json', orient='records', date_format='iso', indent=4, index=True,
+        .to_json(Configs.NESTED_JSON_PATH, orient='records', date_format='iso', indent=4, index=True,
                  force_ascii=False)
 
-    print('Data Extraction-Transformation-Loading completed. \nPlease check the output here : {}'.format(
-        Configs.RESULTS_PATH_JSON))
+
+

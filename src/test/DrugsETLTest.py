@@ -30,8 +30,8 @@ class DrugsETLTest(unittest.TestCase):
         expected_drug_count = 6
         drug_name = 'DIPHENHYDRAMINE'
         df = df[df['drug'] == drug_name]
-        df = df['drug'].count()
-        self.assertEqual(df, expected_drug_count)
+        count = df['drug'].count()
+        self.assertEqual(count, expected_drug_count)
 
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ class Adhoc:
 
     @staticmethod
     def run():
-        df = read_nested_json(Configs.RESULTS_PATH_JSON)
+        df = read_nested_json(Configs.NESTED_JSON_PATH)
         return find_journal_with_max_distinct_drugs(df)
 
 

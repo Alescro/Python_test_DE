@@ -35,5 +35,4 @@ def find_journal_with_max_distinct_drugs(df):
             else:
                 break
 
-    print("Top Journals mentioning the most different drugs are listed below :")
     return journals_aggregated.nlargest(count, 'drug')
